@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+          crossorigin="anonymous">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/accountFunctions.js"> </script>
+    <title>user account</title>
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <%-include("components/header.ejs")%>
+
+    <button class="btn btn-dark" id="logout" type="button"><a href="/api/logout" class="text-white">log out</a></button>
+
+    <div class="row justify-content-center">
+        <div class="col-4 alert alert-warning none" role="alert" id="warning"></div>
+    </div>
+
+    <div class="row justify-content-around">
+
+        <div class="col-md-4">
+
+            <h3>add location:</h3>
+
+            <form class="form-group needs-validation" id="addLocationForm" novalidate>
+
+                <label for="location" class="form-label">location:</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="enter location" required>
+                <div class="invalid-feedback">
+                    location should not be empty
+                </div>
+
+                <label for="longitude" class="form-label">longitude:</label>
+                <input type="number" class="form-control" id="longitude" name="longitude" placeholder="enter longitude" required>
+                <div class="invalid-feedback">
+                    longitude should not be empty
+                </div>
+
+                <label for="latitude" class="form-label">latitude:</label>
+                <input type="number" class="form-control" id="latitude" name="latitude" placeholder="enter latitude" required>
+                <div class="invalid-feedback">
+                    latitude should not be empty
+                </div>
+                <br>
+
+                <div><button class="btn btn-primary" id="addLocationButton" type="button">add location</button></div>
+
+            </form>
+        </div>
+
+        <div class="col-md-4">
+
+            <h3>your locations:</h3>
+
+            <select class="form-control" id="locationsMenu" aria-label="Default select example">
+                <option selected> open locations list </option>
+            </select><br>
+
+
+            <div class="row justify-content-start">
+                <button id="showWeatherButton" class="btn btn-primary">show whether</button>
+                <button id="delButton" class="btn btn-danger">delete location</button>
+                <button id="resetButton" class="btn btn-warning">reset all locations</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="forecastArea" class="none">
+
+        <div class="row justify-content-center">
+            <h3>the forecast is:</h3>
+            <div>
+                <img id="waitGIF" src="/images/animated_wait.gif" alt="animated_gif" >
+            </div>
+        </div>
+
+        <div class="row justify-content-around">
+
+            <div id="mapArea">
+                <img id="weatherPic" src="/images/default_pic.jpg" alt="default picture">
+            </div>
+
+            <div id="tableArea" >
+                <div></div>
+            </div>
+
+        </div>
+
+        </div>
+
+
+</div>
+</body>
+</html>

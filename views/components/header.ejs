@@ -1,0 +1,21 @@
+<div class="row justify-content-center p-3 mb-2 bg-secondary text-white">
+
+    <div class=" col-md-6 offset-md-3">
+        <h1>welcome to our weather site.</h1>
+    </div>
+
+    <div class="col-md-3 ">
+        <a href="/" class="text-primary">home page</a>
+        <a href="/register/readme" class="text-dark">read me</a>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <h2> <%= message%> </h2>
+</div>
+
+<div class="row justify-content-center">
+    <% if (error != "") { %>
+        <div class="col-4 alert alert-warning" role="alert"><%= error %></div>
+    <% } else {} %>
+</div>

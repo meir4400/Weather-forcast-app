@@ -1,0 +1,31 @@
+body{
+  background-image: url("../images/background.jpg");
+}
+
+h1{
+  /*padding-top: 20px;*/
+  /*padding-bottom: 50px;*/
+}
+
+h2{
+  /*padding: 10px;*/
+}
+
+h3{
+  /*padding-top: 20px;*/
+  /*padding-bottom: 30px;*/
+}
+
+input[type=text], input[type=email] input[type=number]{
+  /*margin-bottom: 10px;*/
+  background-color: aliceblue;
+}
+
+.none{
+  display: none;
+}
+
+button{
+  margin: 5px;
+  margin-left: 10px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "cookies": "^0.8.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.3.0",
+    "sqlite3": "^4.1.1"
+  }
+}

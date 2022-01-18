@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>readme</title>
+</head>
+<body>
+
+<p>autors: meir marzel, motty shwartz</p>
+<p>304932460, 310062823</p>
+
+<h4>how site works</h4>
+<p>at '/' request, the client will redirect to weather page (userPage.ejs) if log-in or to register.js if not (in index.js).</p>
+<p>register.js will render details form (register.ejs). if user not register, will be sent password.ejs and then back to register.js.</p>
+<p>if registering completed, add client to data base and redirect login.js to login</p>
+<p>after login, render userPage.ejs (user personal weather page) and call function buildPage (in userPage functions page)</p>
+<p>each change in locations list (add, delete and reset), will be sent to server (api.js) and server will set it in database</p>
+
+<p>all registering functionality and regex validation is at registeringFunctions.js</p>
+<p>all weather page functionality and validation is at accountFunctions.js</p>
+<p>all api functionality and server actions are at api.js.</p>
+<p>the server communicate with dataBase called db that owns two tables, "Contacts" and "Cities"</p>
+<p>the contacts stored in Contacts and checked at registering part</p>
+<p>the locations stored in Cities and checked at api part</p>
+<p>user has session so that in logout or time out he will be redirect back to login page</p>
+<p>all data base data and personal pages are protected and reachable only in open session. the session is checked each access</p>
+
+<a href="/">back to site</a>
+
+</body>
+</html>
+<!--the readme file exist in views file. here is just to see-->
